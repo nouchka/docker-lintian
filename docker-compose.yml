@@ -1,5 +1,7 @@
-lintian:
-  image: nouchka/lintian
-  entrypoint: lintian /tmp/package.deb
-  volumes:
-    - ./test.deb:/tmp/package.deb
+version: '3'
+
+services:
+  lintian:
+    image: nouchka/lintian:latest
+    stdin_open: true
+    tty: true
