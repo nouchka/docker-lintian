@@ -13,7 +13,7 @@
 
 # Versions
 
-* latest
+* latest (using debian:jessie repository)
 
 # Image
 Install lintian in a docker container. Use make install to setup the command.
