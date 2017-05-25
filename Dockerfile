@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:jessie
 MAINTAINER Jean-Avit Promis "docker@katagena.com"
 LABEL org.label-schema.vcs-url="https://github.com/nouchka/docker-lintian"
 LABEL version="latest"
