@@ -1,0 +1,5 @@
+lintian:
+  image: nouchka/lintian
+  entrypoint: lintian /tmp/package.deb
+  volumes:
+    - ./test.deb:/tmp/package.deb
