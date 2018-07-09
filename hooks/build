@@ -1,0 +1,11 @@
+##TEMPLATING template=github_hook
+#!/usr/bin/env bash
+
+CI_PROJECT_URL=`echo $DOCKER_REPO|sed "s/index.docker.io\/nouchka\//https:\/\/github.com\/nouchka\/docker-/"`
+CI_BUILD_REF=$GIT_SHA1
+
+docker build -t ${IMAGE_NAME} \
+	--build-arg=CI_PROJECT_URL=$CI_PROJECT_URL \
+	--build-arg=CI_BUILD_REF=$CI_BUILD_REF \
+.
+###TEMPLATING
