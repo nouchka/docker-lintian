@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stable-slim
 ##TEMPLATING template=docker_header
 ARG CI_PROJECT_URL
 ARG CI_BUILD_REF
@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update --fix-missing && \
 	apt-get update && \
-	apt-get install -y -q lintian
+	apt-get install -y -q lintian fakeroot git
 
 RUN mkdir -p /root/packages/
 WORKDIR /root/packages/
