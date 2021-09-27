@@ -6,10 +6,8 @@ LABEL version="latest"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update --fix-missing && \
-	apt-get update && \
-	apt-get install -y -q lintian fakeroot git
-
-RUN mkdir -p /root/packages/
+	apt-get install -y -q lintian fakeroot git && \
+	mkdir -p /root/packages/
 WORKDIR /root/packages/
 
 ENTRYPOINT ["/usr/bin/lintian"]
