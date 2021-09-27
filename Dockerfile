@@ -1,11 +1,7 @@
 FROM debian:stable-slim
-##TEMPLATING template=docker_header
-ARG CI_PROJECT_URL
-ARG CI_BUILD_REF
 LABEL maintainer="Jean-Avit Promis docker@katagena.com"
-LABEL org.label-schema.vcs-url="${CI_PROJECT_URL}"
+LABEL org.label-schema.vcs-url="https://github.com/nouchka/docker-lintian"
 LABEL version="latest"
-###TEMPLATING
 
 ENV DEBIAN_FRONTEND=noninteractive
 
