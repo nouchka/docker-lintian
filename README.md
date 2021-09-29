@@ -1,8 +1,7 @@
 # docker-lintian
 [![Docker pull](https://img.shields.io/docker/pulls/nouchka/lintian)](https://hub.docker.com/r/nouchka/lintian/)
 [![Docker stars](https://img.shields.io/docker/stars/nouchka/lintian)](https://hub.docker.com/r/nouchka/lintian/)
-[![Docker Automated buil](https://img.shields.io/docker/automated/nouchka/lintian.svg)](https://hub.docker.com/r/nouchka/lintian/)
-[![Build Status](https://img.shields.io/travis/com/nouchka/docker-lintian/master)](https://travis-ci.com/github/nouchka/docker-lintian)
+[![Build Status](https://gitlab.com/japromis/docker-lintian/badges/master/pipeline.svg)](https://gitlab.com/japromis/docker-lintian/pipelines)
 [![Docker size](https://img.shields.io/docker/image-size/nouchka/lintian/latest)](https://hub.docker.com/r/nouchka/lintian/)
 
 # Versions
