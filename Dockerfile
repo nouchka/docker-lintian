@@ -1,13 +1,9 @@
 FROM debian:stable-slim
-LABEL maintainer="Jean-Avit Promis docker@katagena.com"
-LABEL org.label-schema.vcs-url="https://github.com/nouchka/docker-lintian"
-LABEL version="latest"
 
-ENV DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get update && \
-	apt-get install -y -q lintian fakeroot git && \
-	mkdir -p /root/packages/
+RUN  apt-get update && \
+	DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -yq lintian=* fakeroot=* git=* && \
+	mkdir -p /root/packages/ && \
+	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 WORKDIR /root/packages/
 
 ENTRYPOINT ["/usr/bin/lintian"]
