@@ -1,4 +1,5 @@
 DOCKER_IMAGE=lintian
+VERSIONS=2
 
 include Makefile.docker
 
